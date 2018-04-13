@@ -1,15 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css.main.css">
-  <title>GOT Homework 4</title>
+<meta charset="UTF-8">
+<title>GOT Video Player</title>
+<link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
+<!--font awesome links-->
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/solid.js" integrity="sha384-P4tSluxIpPk9wNy8WSD8wJDvA8YZIkC6AQ+BfAFLXcUZIPQGu4Ifv4Kqq+i2XzrM" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/fontawesome.js" integrity="sha384-2IUdwouOFWauLdwTuAyHeMMRFfeyy4vqYNjodih+28v2ReC+8j+sLF9cK339k5hY" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <main>
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/QwievZ1Tx-8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <section id="imageContainer">
+    	<div id="houseImages" style="right : 0"> <!-- add in all of the images to make a scrolling "banner" -->
+    		<img src="images/stark.jpg" alt="Stark House"/>
+    		<img src="images/baratheon.jpg" alt="Baratheon House"/>
+    		<img src="images/lannister.jpg" alt="Lannister House"/>
+    		<img src="images/tully.jpg" alt="Tully House"/>
+    		<img src="images/greyjoy.jpg" alt="Greyjoy House"/>
+    		<img src="images/arryn.jpg" alt="Arryn House"/>
+        <img src="images/targaryen.jpg" alt="Targaryen House"/>
+        <img src="images/tyrell.jpg" alt="Tyrell House"/>
+        <img src="images/frey.jpg" alt="Frey House"/>
+        </div>
+    </section>
 
+    <nav id="bottomNav">
+    	<ul id="navList">
+        	<!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
+            <li><div class="sigilContainer stark" data-offset="0"></div></li>
+            <li><div class="sigilContainer baratheon" data-offset="1"></div></li>
+            <li><div class="sigilContainer lannister" data-offset="2"></div></li>
+            <li><div class="sigilContainer tully" data-offset="3"></div></li>
+            <li><div class="sigilContainer greyjoy" data-offset="4"></div></li>
+            <li><div class="sigilContainer arryn" data-offset="5"></div></li>
+            <li><div class="sigilContainer targaryen" data-offset="6"></div></li>
+            <li><div class="sigilContainer tyrell" data-offset="7"></div></li>
+            <li><div class="sigilContainer frey" data-offset="8"></div></li>
+        </ul>
+    </nav>
+
+    <h1>House Stark</h1><!-- replace this with the house name -->
+
+    <p class="house-info"></p><!-- replace this with house details (github gist for details) -->
+</main>
+
+<section class="lightbox">
+    <span class="close-lightbox">x</span>
+    <!-- add video here with sources for fallback / standards -->
+    <video>
+      <source src="video/House-Stark.mp4" type="video/mp4">
+    </video>
+
+<button>⏪</button>
+    <div class="controls">
+      <i class="fas fa-play"></i>
+      <!-- <i id="backward" class="fas fa-backward"></i>
+      <i id="forward" class="fas fa-fast-forward"></i> -->
+    </div>
+<button class="forward">⏩</button>
+
+
+</section>
+
+<script src="js/main.js"></script>
 </body>
 </html>
